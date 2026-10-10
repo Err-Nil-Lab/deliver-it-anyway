@@ -197,11 +197,17 @@ Yang digantikan: fase global `HAUL → RESOLVING → RESULT`, offer berurutan de
 
 ## Verifikasi dan uji
 
-### [ ] Step V2-7 — QA runtime build v2
+### [-] Step V2-7 — QA runtime build v2
 
 **Pekerjaan:** jalankan dev server; uji drag & drop cepat, deliver beruntun, refresh, resize, kehilangan fokus, akhir shift dengan pengiriman berjalan, 3+ shift. Catat sebagai fakta build, terpisah dari dugaan pengalaman pemain.
 
 **Definition of Done:** tidak ada blocker pada loop utama; masalah yang tersisa tertulis; production build lolos.
+
+**Hasil (2026-10-11, pemilik game, manual di browser):**
+- Dicek, aman: drag & drop, deliver, beli upgrade.
+- Bug ditemukan dan diperbaiki: canvas tidak mengecil lagi setelah viewport pernah membesar (zoom-out lalu zoom-in memotong tampilan permanen). Penyebab: `#game` grid, ukuran canvas ikut menentukan wadahnya. Perbaikan: `#game` fixed + flex di `src/style.css`. Diverifikasi lewat geometri canvas pada urutan zoom 100→20→100→130→90; **belum** dicek visual setelah deploy.
+- Belum dicek: kehilangan fokus, akhir shift dengan pengiriman berjalan, 3+ shift berturut-turut.
+- Dicatat, bukan bug: progres (uang, upgrade) hilang saat refresh karena belum ada penyimpanan. Keputusan `TERBUKA`; tidak dikerjakan sebelum playtest.
 
 ---
 
