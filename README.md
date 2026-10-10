@@ -1,18 +1,23 @@
 # DELIVER IT ANYWAY
 
-Browser desktop prototype using TypeScript, KAPLAY, and Vite.
+Boxy 2D push-your-luck delivery game by ERR NIL. TypeScript, KAPLAY, Vite.
 
-## Run locally
+Drag packages into trucks, weigh load against delivery chance, press DELIVER. Trucks run in parallel; a timer ends each shift, then you buy upgrades. Heavier loads pay more and risk DUAR.
+
+## Controls
+
+- Mouse: drag packages into trucks, click DELIVER and menu buttons.
+- Enter / Space: start, next shift. H: how to play. Esc: back.
+
+## Run
 
 ```sh
 npm install
 npm run dev
+npm run build   # type-check + production build
 ```
 
-## Build
+## Docs
 
-```sh
-npm run build
-```
-
-Project workflow and scope are tracked in `WORK_STEPS.md` and `GDD.md`.
+- `GDD.md` — design (v2). `WORK_STEPS.md` — step list and change log.
+- `docs/archive/` — v1 planning docs, kept for reference.

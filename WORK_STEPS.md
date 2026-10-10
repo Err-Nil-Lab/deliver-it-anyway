@@ -1,6 +1,6 @@
 # DELIVER IT ANYWAY — One Chat, One Step
 
-Dokumen ini adalah urutan kerja utama proyek. Acuan desainnya `GDD.md` **v2.0** (pivot: fokus memuat, pengiriman paralel, shift berwaktu). `PROTOTYPE_PLAN.md`, `RULES_MODEL.md`, dan `PROGRESSION_EVAL.md` menjelaskan loop v1 dan sudah usang untuk desain v2; pakai hanya sebagai rujukan angka dan rumus risiko. Angka dan fitur berstatus `TERBUKA`/`USULAN` hanya menjadi asumsi prototipe sampai diputuskan berdasarkan uji.
+Dokumen ini adalah urutan kerja utama proyek. Acuan desainnya `GDD.md` **v2.0** (pivot: fokus memuat, pengiriman paralel, shift berwaktu). `docs/archive/PROTOTYPE_PLAN.md`, `docs/archive/RULES_MODEL.md`, dan `docs/archive/PROGRESSION_EVAL.md` menjelaskan loop v1 dan sudah usang untuk desain v2; pakai hanya sebagai rujukan angka dan rumus risiko. Angka dan fitur berstatus `TERBUKA`/`USULAN` hanya menjadi asumsi prototipe sampai diputuskan berdasarkan uji.
 
 ## Aturan kerja
 
@@ -177,7 +177,7 @@ Yang digantikan: fase global `HAUL → RESOLVING → RESULT`, offer berurutan de
 
 ---
 
-## Tambahan di luar daftar step
+## Log perubahan (di luar daftar step)
 
 - **Rename (2026-10-10):** judul proyek menjadi DELIVER IT ANYWAY (dokumen, `index.html`, `package.json`, menu). Nama folder tetap `one-more-delivery`.
 - **Main menu (2026-10-10):** judul `DELIVER IT / ANYWAY`, tombol START (klik/Enter/Space) dan HOW TO PLAY (klik/H) yang membuka layar terpisah dengan 4 baris dan BACK (klik/Esc). Scene `MENU`/`HOWTO`/`PLAY` di `main.ts`; tick shift tidak berjalan di luar `PLAY`. Build lolos; belum dicek di browser.

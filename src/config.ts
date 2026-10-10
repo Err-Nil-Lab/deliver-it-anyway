@@ -17,14 +17,9 @@ export const GAME_CONFIG = {
     caution: "#f1fa8c",
   },
   ui: {
-    margin: 48,
-    ruleHeight: 2,
     frameWidth: 2,
     // Type scale: key numbers, body labels, secondary text.
     text: { key: 28, body: 18, small: 14 },
-  },
-  input: {
-    loadDebounceMs: 180,
   },
   risk: {
     // Chance tiers for accent color: >= safeAt is safe, >= cautionAt is caution, otherwise danger.
@@ -33,9 +28,6 @@ export const GAME_CONFIG = {
     // Chance points lost per 1% of capacity exceeded (ratio-based so it scales with capacity upgrades).
     overloadPenaltyPerPercent: 0.8,
     minimumDeliveryChance: 5,
-  },
-  delivery: {
-    resolutionSeconds: 4,
   },
   // v2 shift rules (test values, not design decisions; see GDD.md section 4)
   shift: {
@@ -53,10 +45,6 @@ export const GAME_CONFIG = {
     // New package tier unlocks every N capacity upgrade levels.
     capacityLevelsPerTier: 3,
   },
-  debug: {
-    showSessionSummary: true,
-    maxVisibleHaulLog: 5,
-  },
   // Shift report upgrades (test values). Cost for the next level = baseCost * costGrowth ^ currentLevel.
   upgrades: {
     capacity: { label: "CAPACITY", baseCost: 200, costGrowth: 1.65, maxLevel: 12, perLevel: 2 },
@@ -69,7 +57,6 @@ export const GAME_CONFIG = {
     cargoDropSeconds: 0.22,
     bigPayout: 200,
     overlaySeconds: 0.9,
-    loadShake: 2,
     dispatchShake: 3,
     successShake: 4,
     bustShake: 12,

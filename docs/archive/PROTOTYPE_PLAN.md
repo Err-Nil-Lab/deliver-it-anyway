@@ -1,3 +1,5 @@
+> **ARSIP:** rencana v1 untuk loop v1 (haul tunggal). Tidak sesuai build sekarang; lihat `GDD.md` v2.
+
 # DELIVER IT ANYWAY — rencana pembuktian prototipe
 
 Tanggal: 2026-10-06  

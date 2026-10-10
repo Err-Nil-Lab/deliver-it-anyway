@@ -38,4 +38,4 @@ Design intent lives in the root markdown files; check them before changing rules
 
 - `GDD.md` — game design; items marked `TERBUKA`/`USULAN` are test assumptions, not decisions.
 - `WORK_STEPS.md` — ordered step list. Work is "one chat, one step": only do the active step, update its checklist status, then stop.
-- `PROTOTYPE_PLAN.md`, `RULES_MODEL.md`, `PROGRESSION_EVAL.md` — rationale, expected-value model, and progression analysis.
+- `docs/archive/PROTOTYPE_PLAN.md`, `docs/archive/RULES_MODEL.md`, `docs/archive/PROGRESSION_EVAL.md` — rationale, expected-value model, and progression analysis.

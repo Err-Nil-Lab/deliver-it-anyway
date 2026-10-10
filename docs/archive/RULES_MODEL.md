@@ -1,3 +1,5 @@
+> **ARSIP:** model aturan v1 untuk loop v1 (haul tunggal). Tidak sesuai build sekarang; lihat `GDD.md` v2.
+
 # DELIVER IT ANYWAY — model aturan satu haul
 
 Step 2 — baseline analisis untuk prototipe  

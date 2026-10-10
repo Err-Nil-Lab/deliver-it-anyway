@@ -8,7 +8,7 @@
 - **Tanggal pembaruan:** 2026-10-10
 - **Pemilik keputusan desain:** `TERBUKA`
 - **Platform / input utama:** `TERBUKA` untuk rilis — target prototipe: browser desktop, mouse (drag & drop) + keyboard
-- **Status proyek:** Build di repo masih **loop v1** (muat satu per satu, satu haul global). Desain v2 di bawah belum diimplementasi; urutan kerja ada di `WORK_STEPS.md`. Belum ada browser test maupun playtest pada build mana pun.
+- **Status proyek:** Prototipe v2 berjalan: drag & drop, dua truk paralel, shift berwaktu, report + upgrade, tier paket, utang, menu. Balancing baru tervalidasi simulasi bot; belum ada playtest pemain atau QA runtime penuh. Urutan kerja: `WORK_STEPS.md`.
 - **Workflow produksi:** Satu chat mengerjakan satu step aktif menurut `WORK_STEPS.md`, seperti proyek *Proceed Anyway*.
 
 ### Cara membaca status
@@ -158,7 +158,8 @@
 
 | Klaim / pertanyaan | Status | Bukti saat ini | Uji berikutnya |
 | --- | --- | --- | --- |
-| Build v1: muat satu per satu, dispatch, resolution 4 detik, wallet, log haul, satu upgrade capacity, juice. | `BERJALAN` (legacy v1) | Production build lolos. Belum ada browser test atau playtest. | Dipakai ulang sebagian di v2 (lihat `WORK_STEPS.md`). |
+| Loop v2 berjalan: antrean paket, drag & drop, 2 truk paralel (3 setelah upgrade), timer shift, report, 4 upgrade, 4 tier paket dengan rarity, repair 40% + utang, menu. | `BERJALAN` | `src/shiftState.ts`, `src/main.ts`; production build lolos; pemilik mengonfirmasi drag, deliver, report, dan upgrade di browser. | QA penuh (V2-7) dan playtest (V2-8). |
+| Balancing awal membuat strategi risiko sedang (chance ≥70%) terbaik dan upgrade habis sekitar shift 20–23. | `PERLU UJI` | Simulasi bot (muat 1,3 s, tanpa ragu); bukan pemain. | Playtest V2-8. |
 | Fungsi risiko `calculateDeliveryChance` dapat dipakai ulang tanpa perubahan. | `BERJALAN` | `src/systems/risk.ts` murni dari load dan capacity. | Dipakai per truk. |
 | Drag & drop + armada paralel mempertahankan keputusan “satu lagi”. | `PERLU UJI` | Belum ada. | Playtest shift pertama. |
 | Waktu rute yang sama membuat muatan penuh lebih menguntungkan per menit dan menahan farming truk kecil. | `PERLU UJI` | Argumen model; belum diuji. | Bandingkan uang/menit truk kecil vs penuh di shift report. |
