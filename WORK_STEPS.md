@@ -193,6 +193,8 @@ Yang digantikan: fase global `HAUL → RESOLVING → RESULT`, offer berurutan de
 
 - **Package readability pass 2 (2026-10-10):** risiko jadi kata (`HEAVY n` pada strip merah untuk paket yang tidak muat aman di truk mana pun, angka kelebihan dihapus dari kartu); reward jadi bentuk lewat `Package.rarity` (0 bingkai tunggal, 1 bingkai ganda, 2 jackpot dengan header solid dan nama). Tidak ada warna baru; merah tetap hanya untuk risiko. Build lolos; belum dicek di browser dan belum diuji "3 detik" (paket paling bernilai / paling berat).
 
+- **Cleanup lanjutan (2026-10-10):** `main.ts` dipecah menjadi `context`, `layout`, `audio`, `scenes/{menu,play,report}`; perilaku dipertahankan (pemindahan mekanis). Repo git kosong di folder induk dihapus. Build lolos; perlu sanity check di browser (menu, drag, deliver, report, upgrade).
+
 ## Verifikasi dan uji
 
 ### [ ] Step V2-7 — QA runtime build v2

@@ -26,9 +26,12 @@ See the file list under Design status. Tune values in `src/config.ts` rather tha
 `GDD.md` v2.0: two trucks run deliveries in parallel without blocking input, shifts are timed, and a shift report sells upgrades. Current code:
 
 - `src/shiftState.ts` — pure state (package queue, trucks, `tickShift`, upgrades). No KAPLAY.
-- `src/main.ts` — scenes `MENU` / `HOWTO` / `PLAY`, immediate-mode `onDraw`, mouse drag & drop, shift report.
+- `src/context.ts` — KAPLAY instance `k`, color tokens, shared mutable `session` (state, scene, drag), feedback arrays.
+- `src/layout.ts` — card/bed/queue geometry and hit-test helpers derived from `session.state`.
+- `src/scenes/` — `menu.ts` (menu, how-to), `play.ts` (drag & drop, trucks, HUD, feedback), `report.ts` (shift report, upgrades, next shift).
+- `src/audio.ts` — WebAudio SFX. `src/main.ts` — wires input and the draw loop to the scenes.
 - `src/systems/risk.ts` — `calculateDeliveryChance(load, capacity)`.
-- `src/config.ts` — all tuning values (`shift`, `upgrades`, `juice`).
+- `src/config.ts` — all tuning values (`shift`, `upgrades`, `risk`, `juice`).
 
 `WORK_STEPS.md` tracks V2 steps; V2-7 to V2-9 (runtime QA, playtest, tuning) remain.
 
